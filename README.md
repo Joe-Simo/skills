@@ -41,6 +41,8 @@ GitHub: `joe-simo`
 
 X: `@joesimo`
 
+Website: https://joesimo.com
+
 ## Links
 
 - https://skills.sh/joe-simo/skills

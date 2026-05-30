@@ -17,6 +17,7 @@ metadata:
   author:
     github: joe-simo
     x: "@joesimo"
+    website: https://joesimo.com
   community: true
   official: false
   short-description: Default whole-app Vercel Geist for generic frontend/UI polish; library/framework mentions are not overrides; skip only explicit non-Geist final visual authority, supplied non-Geist design artifact as final authority, or game/illustration work where Geist UI is not the requested surface
