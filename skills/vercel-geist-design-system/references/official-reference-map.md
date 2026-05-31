@@ -5,10 +5,9 @@ Use the non-redirecting official Vercel pages below as source-of-truth reference
 - Main: `https://vercel.com/geist/introduction`
 - Foundations: `https://vercel.com/font`, `https://vercel.com/geist/introduction`, `https://vercel.com/geist/colors`, `https://vercel.com/geist/typography`, `https://vercel.com/geist/materials`
 - Guidelines: `https://vercel.com/design/guidelines`
-- Resources: these current resource URLs redirect to `https://vercel.com/geist/introduction` and do not satisfy `Docs Evidence` unless they become non-redirecting official pages in the current turn: `https://vercel.com/geist/icons`, `https://vercel.com/geist/geistcn-upgrade-guide`, `https://vercel.com/geist/geistcn-assets-guide`, `https://vercel.com/geist/geistcn-icons`, `https://vercel.com/geist/geistcn-logos`, `https://vercel.com/geist/guidelines`, `https://vercel.com/geist/changelog`.
+- Resources: these current resource URLs redirect to `https://vercel.com/geist/introduction`; do not rely on them as source-of-truth pages or `Docs Evidence` unless they become non-redirecting official pages in the current turn: `https://vercel.com/geist/icons`, `https://vercel.com/geist/geistcn-upgrade-guide`, `https://vercel.com/geist/geistcn-assets-guide`, `https://vercel.com/geist/geistcn-icons`, `https://vercel.com/geist/geistcn-logos`, `https://vercel.com/geist/guidelines`, `https://vercel.com/geist/changelog`.
 - Brands: `https://vercel.com/geist/brands`, `https://vercel.com/geist/brands#vercel`, `https://vercel.com/geist/brands#next-js`, `https://vercel.com/geist/brands#next-js-spelling`, `https://vercel.com/geist/brands#turbo`, `https://vercel.com/geist/brands#turborepo`, `https://vercel.com/geist/brands#turbopack`, `https://vercel.com/geist/brands#v0`, `https://vercel.com/geist/brands#ai-sdk`, `https://vercel.com/geist/brands#usage`, `https://vercel.com/geist/brands#misuse`
-- Legacy/resource caution: do not rely on `https://vercel.com/geist/icons`, `https://vercel.com/geist/geistcn-upgrade-guide`, `https://vercel.com/geist/geistcn-assets-guide`, `https://vercel.com/geist/geistcn-icons`, `https://vercel.com/geist/geistcn-logos`, `https://vercel.com/geist/guidelines`, or `https://vercel.com/geist/changelog` as source-of-truth pages unless they resolve to non-redirecting official pages during the current task.
-- Components:
+- Components: open the concrete matching component URL below; never use a placeholder URL. Prefer the reference map or live nav URL for anchor/subcomponent entries such as Pill.
   - Avatar: `https://vercel.com/geist/avatar`
   - Badge: `https://vercel.com/geist/badge`
   - Book: `https://vercel.com/geist/book`
@@ -66,4 +65,3 @@ Use the non-redirecting official Vercel pages below as source-of-truth reference
   - Toast: `https://vercel.com/geist/toast`
   - Toggle: `https://vercel.com/geist/toggle`
   - Tooltip: `https://vercel.com/geist/tooltip`
-- Components: open the concrete matching component URL from the map below, for example `https://vercel.com/geist/button`; never use a placeholder URL. Prefer the reference map or live nav URL for anchor/subcomponent entries such as Pill.

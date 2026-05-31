@@ -60,24 +60,11 @@ Pass criteria:
 
 Official claim blockers:
 
-- Final answer lacks page-specific `Docs Evidence` for every official Geist/Vercel page required for the task, or cites only memory, class names, token names, screenshots, or generic Geist adjectives.
-- A final answer claims visual polish or Vercel Taste Gate passage without screenshot inspection and interaction audit when those checks were possible.
-- Any required applied foundation, guideline, component, or brand row is missing, blocked, lacks an exact section/anchor, or lacks a page-specific short quote that affected a concrete decision.
-- Any Web Interface Guidelines interaction failure remains unrevised without a concrete blocker.
+Use Source-Of-Truth Gate for `Docs Evidence` blockers. Additionally, do not claim visual polish or Vercel Taste Gate passage without screenshot inspection and interaction audit when possible, and do not leave Web Interface Guidelines failures unrevised without a concrete blocker.
 
 Local anti-template heuristics:
 
-These require revision or explicit user-scope plus official-doc justification before strict claims, but they are not official Geist violations by themselves and do not satisfy `Docs Evidence`.
-
-- Purple-blue gradient SaaS aesthetic.
-- Decorative orbs, bokeh blobs, aurora backgrounds, or ornamental SVG filler.
-- Oversized rounded cards used as page sections.
-- Card-in-card layouts.
-- Heavy drop shadows or glassy panels.
-- Fake sample data added only to make the UI look populated.
-- Marketing copy inside product workflows.
-- Dozens of visible controls before the primary task is clear.
-- Mixed visual systems where only isolated buttons or cards look Geist-like.
+Use Anti-Patterns And Failure Modes above as the local anti-template checklist. These items require revision or explicit user-scope plus official-doc justification before strict claims, but they are not official Geist violations by themselves and do not satisfy `Docs Evidence`.
 
 If the app cannot be run, screenshots cannot be captured, or interaction checks cannot be performed, say that explicitly in the final response and do not claim the Vercel Taste Gate passed. If screenshots and interaction checks are possible, the final response must include the audit evidence: dev command, URL, mobile/laptop/desktop/ultra-wide viewport sizes, screenshot paths, changed states inspected, interaction applicability matrix summary, blockers, and revision decisions made because of the audits. Use an inspection method instead of screenshot paths only when screenshot capture is blocked, and then do not claim the Vercel Taste Gate passed.
 

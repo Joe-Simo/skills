@@ -92,7 +92,7 @@ The following typography names are implementation mappings only. They do not sat
 - Copy: `text-copy-24`, `text-copy-20`, `text-copy-18`, `text-copy-16`, `text-copy-14`, `text-copy-13`, `text-copy-13-mono`.
 - Use descendant `<strong>` inside a Geist typography class for Strong treatment.
 - Use Subtle modifiers only through the project's official Geist class/token implementation. Do not fake subtle text by making it unreadably gray.
-- Use tabular numeric treatment for numeric label styles. If the project lacks it, add a named tabular utility to the relevant Geist label/copy utility; use Geist Mono only for official mono classes or technical/code-like content.
+- Use `tabular-nums` for metrics, timestamps, table numbers, counters, and numeric label/copy styles; use Geist Mono only for official mono classes or technical/code-like content.
 
 Official usage guidance:
 
@@ -120,7 +120,6 @@ Typography constraints:
 - Do not make every heading bold. Prefer medium/semi-bold and hierarchy through size, spacing, and placement.
 - Do not use negative letter spacing globally. Apply tight tracking only to large display/headline text if the existing system does.
 - Keep long-form prose readable; do not use Geist Mono for paragraphs.
-- Use `tabular-nums` for metrics, timestamps, table numbers, and counters.
 
 ## App-Wide Setup
 

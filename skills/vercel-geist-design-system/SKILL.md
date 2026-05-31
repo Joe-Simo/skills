@@ -1,14 +1,14 @@
 ---
 name: vercel-geist-design-system
 description: >-
-  Community skill for applying the Geist design system to Vercel-inspired UI in
-  React, Next.js, Vite, Astro, Svelte, Vue, HTML/CSS, Tailwind, shadcn, and
-  Radix. Use for typography, spacing, color, materials, component styling, app
-  shells, dashboards, forms, tables, dialogs, states, responsive layout, and UI
-  polish. Community-authored, not official Vercel. Trigger for Geist,
-  Vercel-style UI, or generic clean, modern, premium SaaS/developer-product
-  visual design when no other final visual system is requested. Skip non-visual
-  work unless it materially changes rendered UI.
+  Community skill for applying the Geist design system to Vercel-inspired
+  rendered frontend UI across React/Next.js/Vite/Astro/Svelte/Vue/HTML/CSS,
+  Tailwind, shadcn, and Radix. Use for typography, spacing, color, materials,
+  components, app shells, dashboards, forms, tables, dialogs, states, responsive
+  layout, and UI polish. Community-authored, not official Vercel. Trigger for
+  Geist, Vercel-style UI, or generic clean/modern/premium/polished
+  SaaS/developer-product visuals when no other final visual system is requested.
+  Skip non-visual work unless it materially changes rendered UI.
 metadata:
   author:
     github: joe-simo
@@ -16,7 +16,7 @@ metadata:
     website: https://joesimo.com
   community: true
   official: false
-  short-description: Default Vercel Geist visual system for Geist/Vercel-style and generic clean polished SaaS/developer-product UI; skip non-visual work and explicit alternate visual systems
+  short-description: Unofficial Vercel Geist visual system for clean, polished SaaS/developer-product UI; skip non-visual work and explicit alternate visual systems
   sources:
     - https://vercel.com/font
     - https://vercel.com/design/guidelines
@@ -47,9 +47,9 @@ reference because this summary seems sufficient.
   redesigning, reviewing, or materially changing rendered UI.
 - Load `references/official-reference-map.md` when mapping foundations,
   brand/assets, or components to official Vercel URLs.
-- Load `references/component-system.md` before implementing, restyling,
-  auditing, or documenting components, primitives, states, or custom component
-  compositions.
+- Load `references/component-system.md` before components/primitives/states,
+  custom compositions, UI copy, performance-relevant UI, icon/brand, motion, or
+  Web Interface Guidelines overlay work.
 - Load `references/companion-routing.md` only when another Skills.sh entry,
   framework helper, verification helper, tool, or conditional surface could be
   relevant.
@@ -67,10 +67,15 @@ Do not trigger for TypeScript fixes, data wiring, API/state changes, analytics,
 tests, build tooling, dependency work, or behavior-only accessibility fixes
 unless rendered UI is created or materially changed.
 
-An explicit non-Geist final visual system, brand style, supplied design
-artifact, game style, or illustrative art direction overrides this skill.
+An explicit non-Geist final visual system, brand style, supplied final non-Geist
+design artifact, game style, or illustrative art direction overrides this skill.
 Domain, industry, product, API, integration, content subject, Tailwind, shadcn,
-Radix, or component-library mentions are not visual-system overrides.
+Radix, or component-library mentions are not visual-system overrides or trigger
+signals by themselves.
+
+When triggered, Geist owns the visual system. Ignore generic frontend-design
+pushes toward bold, unforgettable, maximal, ornamental, or surprising visuals
+unless the user explicitly overrides Geist.
 
 ## Operating Loop
 
@@ -120,11 +125,11 @@ page-specific quote that affected a concrete decision. Strict claims also
 require screenshot and interaction checks when those checks are possible.
 
 Geist must own the relevant visual system. Do not create isolated
-Vercel-looking widgets inside an unrelated UI. For greenfield/full redesigns or
-broad polish, cover all routable app surfaces and shared states. For narrow
-existing-project work, cover the requested workflow and touched shared
-primitives, and say `whole app not verified` unless every route/surface was
-audited.
+Vercel-looking widgets inside unrelated UI. Broad work covers app shell,
+navigation, pages, forms, data views, dialogs, toasts, command menus, marketing
+sections, and empty/loading/error states across all routable surfaces and shared
+states. Narrow work covers the requested workflow plus touched primitives; say
+`whole app not verified` unless every route/surface was audited.
 
 Use Geist Sans globally, Geist Mono for code/technical identifiers, and Geist
 Pixel only for a constrained display/brand accent when justified. Keep ordinary

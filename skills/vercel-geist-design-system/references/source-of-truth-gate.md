@@ -2,10 +2,9 @@
 
 The linked Geist docs are the design system. This skill is the enforcement layer that makes the agent use them.
 
-- Do not rely only on this skill summary for design decisions when official docs are available.
-- Before implementing any UI that creates or materially changes rendered output, consult the official Vercel Font page plus Geist Introduction, Colors, Typography, Materials, and Guidelines pages.
-- Before implementing a specific UI pattern, consult the matching Geist component page from the reference map. A docs fallback is allowed only after attempting the required official URL in the current turn using every available browsing/docs tool.
-- If current docs remain unavailable after those attempts, state the attempted URLs, tools, and exact failure mode. During blocked-doc fallback, local rules in this skill are advisory only; they cannot satisfy `Docs Evidence`, cannot support strict/docs-verified claims, and cannot be enforced as source-of-truth visual rules. If a needed decision has no current official source trace, mark that decision blocked and do not enforce an invented local visual rule. Shell/package-manager network failure alone is not enough if web/browser access exists. Do not use the fallback merely because the reference map, memory, or existing class names seem sufficient. When any required official page could not be read, label the result as `local Geist fallback, not docs-verified`; do not claim strict Geist, official Geist compliance, source-of-truth alignment, or Vercel Taste Gate passage for affected surfaces unless all required docs, screenshot checks, and interaction checks were completed.
+- Do not rely only on this skill summary when official docs are available.
+- For UI that creates or materially changes rendered output, consult the official Vercel Font page plus Geist Introduction, Colors, Typography, Materials, Guidelines, and matching component pages.
+- If a required official page cannot be read, follow the fallback and claim limits in Official Source-Of-Truth Gate below.
 - Do not treat using Geist fonts or class names as sufficient. The visual result must match the Geist/Vercel product language: restrained, precise, systematic, dense when useful, and visually coherent across every surface.
 - If a generated design looks only generically "SaaS" or "clean" but not recognizably Vercel/Geist, revise it before finishing.
 - The final UI should be judged as a product system, not a single screen: tokens, shell, navigation, controls, data displays, dialogs, feedback, and states must all belong together.
