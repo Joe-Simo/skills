@@ -5,6 +5,11 @@
       "title": "Design Systems",
       "description": "Community skills for Geist-style interface design, scoped Vercel/Grid-style UI surfaces, UI review, and design-system consistency.",
       "skills": ["vercel-geist-design-system"]
+    },
+    {
+      "title": "Experiential Web Design",
+      "description": "Community skills for original design-award-style experiential sites, motion, interaction craft, art direction, and award-readiness verification.",
+      "skills": ["awwwards-style-web-design"]
     }
   ]
 }
