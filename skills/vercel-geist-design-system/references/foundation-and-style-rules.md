@@ -33,14 +33,16 @@ The target feel is a restrained developer-tool interface:
 - Use full-width page bands or unframed layouts for sections. Do not put page sections inside decorative cards.
 - Cards are for repeated items, modals, individual panels, and genuine framed tools. Do not nest cards inside cards.
 - Use a predictable grid and stable dimensions for toolbars, boards, tables, counters, and repeated tiles.
-- Treat "grid" as layout first, not background treatment. Use CSS grid/flex,
-  columns, rows, borders, and spacing to organize content. Do not add visible
-  guide-line grids, graph-paper backgrounds, repeating-linear-gradient grid
-  textures, blueprint/canvas backgrounds, or decorative grid overlays unless
-  the user explicitly requests visible guides/cells, a supplied design clearly
-  contains them, or the official Geist Grid component is the intended UI
-  surface. If the user says "like Vercel's grid" ambiguously, implement a
-  functional content grid and ask/report before adding visible guide lines.
+- Treat "grid" as layout first for ordinary responsive UI: use CSS grid/flex,
+  columns, rows, borders, and spacing to organize content. When the user asks
+  for a Vercel.com-like grid, Vercel grid art, visible guide lines, cells, a
+  full-page Grid treatment, or supplies a design that clearly contains those
+  elements, implement an intentional Geist/Grid-style cell-and-guide surface
+  instead of stripping the lines out. Visible grid treatments should be content
+  surfaces with real cells, aligned borders, clipping/solid cells where useful,
+  and responsive row/column behavior. Do not add accidental graph-paper,
+  blueprint, or repeating-gradient decoration behind unrelated UI when the
+  request is only for a clean or ordinary responsive layout.
 - Local implementation heuristic, not `Docs Evidence`: when the project lacks an official spacing token source, use a restrained 4px-compatible rhythm such as 8, 12, 16, 20, 24, 32, 48, and 64 to preserve compact Geist composition. If official or project Geist-mapped spacing tokens exist, use those instead.
 - Keep page gutters responsive: about 16px on mobile, 24px on tablet, 32px on desktop, with a sensible max-width for reading surfaces.
 - Do not let hover, loading, selected, or error states resize components or shift layout.
@@ -141,7 +143,7 @@ For any task that creates or materially changes rendered UI, create or verify th
 - Typography: define or map the official `text-heading-*`, `text-button-*`, `text-label-*`, and `text-copy-*` classes. New components and screens must use these classes or mapped equivalents; raw `text-sm`, `font-bold`, arbitrary line-height, and arbitrary tracking are allowed only inside shared token/utility definitions or inside third-party/generated code that cannot consume project utilities. The final response must name the file, constraint, and why a mapped utility was impossible.
 - Colors: define semantic tokens for `background`, `foreground`, `muted-foreground`, `border`, `ring`, `accent`, `link`, `info`, `destructive`, `success`, and `warning`, mapped to Background 1/2, component backgrounds 1-3, borders 4-6, high-contrast backgrounds 7-8, and text/icons 9-10. Components should consume semantic tokens, not hard-coded grays.
 - Materials: define or map `material-base`, `material-small`, `material-medium`, `material-large`, `material-tooltip`, `material-menu`, `material-modal`, and `material-fullscreen` when the project does not already have them. Also define radius tokens/utilities for 6px, 12px, and 16px, and require screen files to consume those tokens rather than one-off `rounded-*` classes.
-- Primitives: create or adapt shared primitives for Button/IconButton, Input/Textarea, Select/Combobox when needed, Checkbox/Radio/Switch, Tabs, Modal/Sheet/Drawer, Menu/Tooltip, Toast/Feedback, Table/List, Empty/Error/Loading/Skeleton states, Surface/Material, and AppShell before composing multiple screens. App shells, panels, and surfaces use CSS grid/flex plus Geist tokens/materials by default; consult Geist Grid only when the user explicitly asks for visible guide/cell layout, a supplied design clearly includes it, or the Grid component itself is the intended UI surface. Panels/surfaces still inherit Context Card, Relative Time Card, Project Banner, Entity, Description, or Table Best Practices as applicable to the content.
+- Primitives: create or adapt shared primitives for Button/IconButton, Input/Textarea, Select/Combobox when needed, Checkbox/Radio/Switch, Tabs, Modal/Sheet/Drawer, Menu/Tooltip, Toast/Feedback, Table/List, Empty/Error/Loading/Skeleton states, Surface/Material, and AppShell before composing multiple screens. App shells, panels, and surfaces use CSS grid/flex plus Geist tokens/materials by default; consult Geist Grid when the user asks for Vercel.com-like visible guide/cell layout, a supplied design clearly includes it, or the Grid component itself is the intended UI surface. Panels/surfaces still inherit Context Card, Relative Time Card, Project Banner, Entity, Description, or Table Best Practices as applicable to the content.
 - Borders and focus: define one shared focus-visible utility/variant using the project semantic `ring` token mapped to a specific consulted Geist color role/scale, then verify the focus behavior separately through the Vercel Web Interface Guidelines accessibility checks. Wire that utility into every interactive primitive and prohibit screen-local outline, box-shadow, or ring definitions.
 - App shell: use Geist foundations and Vercel Web Interface Guidelines for root background, content gutters, header/sidebar/navigation structure when needed, restrained dividers, predictable max-width behavior, mobile behavior, one obvious primary action zone per view, skip-to-content, valid heading hierarchy, and context-specific `<title>`.
 - State system: provide consistent hover, active/pressed, selected/current, disabled, loading, empty, error, validation, focus-visible, and reduced-motion states across the app.

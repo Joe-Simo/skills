@@ -3,7 +3,7 @@
   "groupings": [
     {
       "title": "Design Systems",
-      "description": "Community skills for Geist-style interface design, functional UI grids, UI review, and design-system consistency.",
+      "description": "Community skills for Geist-style interface design, Vercel/Grid-style UI grids, UI review, and design-system consistency.",
       "skills": ["vercel-geist-design-system"]
     }
   ]

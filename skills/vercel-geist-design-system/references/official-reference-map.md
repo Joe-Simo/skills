@@ -30,7 +30,7 @@ Use the non-redirecting official Vercel pages below as source-of-truth reference
   - Error: `https://vercel.com/geist/error`
   - Feedback: `https://vercel.com/geist/feedback`
   - Gauge: `https://vercel.com/geist/gauge`
-  - Grid: `https://vercel.com/geist/grid` (visible guide/cell component only; ordinary CSS grid/flex layout is a functional layout technique and does not require visible grid backgrounds)
+  - Grid: `https://vercel.com/geist/grid` (visible guide/cell component for intentional cell-and-guide layouts; ordinary CSS grid/flex remains the baseline for plain responsive layout)
   - Input: `https://vercel.com/geist/input`
   - Keyboard Input: `https://vercel.com/geist/keyboard-input`
   - Loading Dots: `https://vercel.com/geist/loading-dots`
