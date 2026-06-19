@@ -22,9 +22,12 @@ rounded values, button/input defaults, layout rhythm, elevation, motion, focus,
 and voice/content rules. Use `https://vercel.com/design.dark.md` for dark mode
 or theme switching. These documents are marked alpha, so never rely on cached
 values when strict/docs-verified Geist is claimed; open the current document in
-the current turn and map project tokens from it first. The older Geist Colors,
-Typography, Materials, and component pages remain required detailed references
-when their domain is touched, but `design.md` is the first token/default source.
+the current turn and map project tokens from it first. Use bundled snapshots
+`vercel-design.md` and `vercel-design-dark.md` only for local exact lookup or
+blocked-doc fallback. Older Geist Introduction, Colors, Typography, and
+Materials pages are conditional supplements: open them when the user asks for
+that page's detail, `design.md` lacks a needed detail, or a component/page
+decision depends on them.
 
 ## Geist Essence
 
@@ -118,7 +121,7 @@ Implementation guidance:
 Use the full Geist type family when available:
 
 - Geist Sans: headings, body text, navigation, buttons, forms, tables, dialogs.
-- Geist Mono: code, command text, shortcuts, IDs, versions, environment variables, commit hashes, terminal/log output, and inline technical tokens. Metrics, prices, timestamps, and numeric columns should use the official label/copy typography utility with tabular numeric treatment first; use Mono only when the consulted Typography page or an existing Geist-mapped primitive maps that context to a mono class.
+- Geist Mono: code, data, tabular figures, command text, shortcuts, IDs, versions, environment variables, commit hashes, terminal/log output, inline technical tokens, and numeric alignment when official `*-mono` tokens or the consulted component context fit. Use Sans label/copy utilities with `tabular-nums` for ordinary numeric UI where the current docs or project primitive map that context to Sans. Never use Mono for prose.
 - Geist Pixel: local restraint, not Vercel Font source-of-truth usage guidance. Use it sparingly for one intentional display/brand moment such as a wordmark, small campaign lockup, highly constrained hero accent, banner accent, or constrained dashboard/product accent. Never use it for body copy, dense tables, forms, settings copy, navigation, long headings, metric grids, or ordinary dashboard/product text unless current official Pixel or Font guidance explicitly supports that exact use.
 - In Next.js with the `geist` package, import Pixel variants from `geist/font/pixel`: `GeistPixelSquare`, `GeistPixelGrid`, `GeistPixelCircle`, `GeistPixelTriangle`, and `GeistPixelLine`.
 
@@ -139,7 +142,7 @@ The following typography names are implementation mappings only. They do not sat
 - Copy: `text-copy-24`, `text-copy-20`, `text-copy-18`, `text-copy-16`, `text-copy-14`, `text-copy-13`, `text-copy-13-mono`.
 - Use descendant `<strong>` inside a Geist typography class for Strong treatment.
 - Use Subtle modifiers only through the project's official Geist class/token implementation. Do not fake subtle text by making it unreadably gray.
-- Use `tabular-nums` for metrics, timestamps, table numbers, counters, and numeric label/copy styles; use Geist Mono only for official mono classes or technical/code-like content.
+- Use `tabular-nums` for metrics, timestamps, table numbers, counters, and numeric label/copy styles. Use Geist Mono for code, data, tabular figures, official mono classes, or technical content when the current docs or mapped component context supports it.
 
 Usage mapping guidance after current docs evidence:
 
@@ -165,7 +168,7 @@ Typography constraints:
 
 - Do not default an entire interface to `text-base`.
 - Do not make every heading bold. Prefer medium/semi-bold and hierarchy through size, spacing, and placement.
-- Do not use negative letter spacing globally. Apply tight tracking only to large display/headline text if the existing system does.
+- Do not invent global negative tracking. Preserve the official `design.md` letter-spacing values inside mapped heading utilities, including smaller heading tokens, and keep body/copy tracking at the documented defaults.
 - Keep long-form prose readable; do not use Geist Mono for paragraphs.
 
 ## App-Wide Setup
@@ -175,7 +178,7 @@ This section is an implementation checklist for the mandatory Foundation Gate; i
 For any task that creates or materially changes rendered UI, create or verify the shared Geist foundation before styling individual screens, routes, pages, or feature components.
 
 - Fonts: use Geist Sans and Geist Mono through the host project's font setup. In Next.js, prefer the `geist` package with `geist/font/sans` and `geist/font/mono`; add `geist/font/pixel` only when a constrained display/brand accent is actually used.
-- Root layout: apply Geist Sans as the default UI font, expose Geist Mono for code, command text, shortcuts, technical identifiers, versions, environment variables, commit hashes, terminal/log output, and official mono classes, and expose Geist Pixel variables only for constrained display accents. Numeric product data should stay in Sans label/copy utilities with tabular numeric treatment unless the consulted Typography page or an existing Geist-mapped primitive maps that context to Mono.
+- Root layout: apply Geist Sans as the default UI font, expose Geist Mono for code, data, tabular figures, command text, shortcuts, technical identifiers, versions, environment variables, commit hashes, terminal/log output, and official mono classes, and expose Geist Pixel variables only for constrained display accents. Numeric product data should use the current docs or mapped component context to choose between Sans plus `tabular-nums` and official mono typography.
 - Typography: define or map the official `text-heading-*`, `text-button-*`, `text-label-*`, and `text-copy-*` classes. New components and screens must use these classes or mapped equivalents; raw `text-sm`, `font-bold`, arbitrary line-height, and arbitrary tracking are allowed only inside shared token/utility definitions or inside third-party/generated code that cannot consume project utilities. The final response must name the file, constraint, and why a mapped utility was impossible.
 - Spacing and rounded: define or map the current `design.md` spacing scale and `rounded.sm`, `rounded.md`, `rounded.lg`, and `rounded.full` before screen work. Screen files should consume named tokens/classes instead of one-off spacing/radius values.
 - Colors: define semantic tokens for `background`, `foreground`, `muted-foreground`, `border`, `ring`, `accent`, `link`, `info`, `destructive`, `success`, and `warning`, mapped to `design.md` light tokens and `design.dark.md` dark tokens when dark mode is in scope. Components should consume semantic tokens, not hard-coded grays.

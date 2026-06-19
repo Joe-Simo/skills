@@ -3,8 +3,9 @@
 Use the non-redirecting official Vercel pages below as source-of-truth references. Redirect-only resources are listed only for routing/drift awareness and do not satisfy `Docs Evidence` unless they become non-redirecting official pages in the current turn.
 
 - Canonical design/token documents: `https://vercel.com/design.md` (light theme), `https://vercel.com/design.dark.md` (dark theme)
+- Bundled local snapshots for exact lookup and blocked-doc fallback only: `references/vercel-design.md`, `references/vercel-design-dark.md`
 - Main: `https://vercel.com/geist/introduction`
-- Foundations: `https://vercel.com/font`, `https://vercel.com/geist/introduction`, `https://vercel.com/geist/colors`, `https://vercel.com/geist/typography`, `https://vercel.com/geist/materials`
+- Conditional foundation supplements: `https://vercel.com/font`, `https://vercel.com/geist/introduction`, `https://vercel.com/geist/colors`, `https://vercel.com/geist/typography`, `https://vercel.com/geist/materials`
 - Guidelines: `https://vercel.com/design/guidelines`
 - Resources: these current resource URLs redirect to `https://vercel.com/geist/introduction`; do not rely on them as source-of-truth pages or `Docs Evidence` unless they become non-redirecting official pages in the current turn: `https://vercel.com/geist/icons`, `https://vercel.com/geist/geistcn-upgrade-guide`, `https://vercel.com/geist/geistcn-assets-guide`, `https://vercel.com/geist/geistcn-icons`, `https://vercel.com/geist/geistcn-logos`, `https://vercel.com/geist/guidelines`, `https://vercel.com/geist/changelog`.
 - Brands: `https://vercel.com/geist/brands`, `https://vercel.com/geist/brands#vercel`, `https://vercel.com/geist/brands#next-js`, `https://vercel.com/geist/brands#next-js-spelling`, `https://vercel.com/geist/brands#turbo`, `https://vercel.com/geist/brands#turborepo`, `https://vercel.com/geist/brands#turbopack`, `https://vercel.com/geist/brands#v0`, `https://vercel.com/geist/brands#ai-sdk`, `https://vercel.com/geist/brands#usage`, `https://vercel.com/geist/brands#misuse`

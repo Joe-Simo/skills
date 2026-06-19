@@ -49,6 +49,9 @@ reference because this summary seems sufficient.
   redesigning, reviewing, or materially changing rendered UI.
 - Load `references/official-reference-map.md` when mapping foundations,
   brand/assets, or components to official Vercel URLs.
+- Load `references/vercel-design.md` when exact bundled light-theme token,
+  component-default, motion, layout, focus, or voice values are needed. Load
+  `references/vercel-design-dark.md` for the same dark-theme values.
 - Load `references/component-system.md` before components, primitives, component
   states, custom compositions, or component-page mapping.
 - Load `references/trust-brand-and-asset-rules.md` before certification/trust
@@ -151,12 +154,19 @@ because it is the official compact Geist token/default source for colors,
 typography, spacing, rounded values, component defaults, layout rhythm,
 elevation, motion, focus, and content voice. `https://vercel.com/design.dark.md`
 is required when dark mode, theme switching, or dark screenshots are in scope.
-Required foundation pages also include `https://vercel.com/font`,
-`https://vercel.com/geist/introduction`, `/colors`, `/typography`,
-`/materials`, and `https://vercel.com/design/guidelines`. Brand/logo work also
-requires `https://vercel.com/geist/brands`. Component work requires every
-matching official component page from `references/official-reference-map.md` or
-the live Geist component navigation.
+Bundled snapshots in `references/vercel-design.md` and
+`references/vercel-design-dark.md` exist so agents can inspect exact token tables
+and defaults locally, but strict/docs-verified claims still require opening the
+current live official documents because those pages are alpha.
+Treat `design.md` as the foundation source. Use
+`https://vercel.com/design/guidelines` for rendered UI interaction,
+accessibility, state, browser, and polish checks. Use `https://vercel.com/font`
+when installing/configuring Geist fonts or using Pixel. Use Geist Introduction,
+Colors, Typography, or Materials only when the user asks for that page's detail,
+`design.md` lacks a needed detail, or a component/page decision depends on it.
+Brand/logo work requires `https://vercel.com/geist/brands`. Component work
+requires every matching official component page from
+`references/official-reference-map.md` or the live Geist component navigation.
 
 If required official docs cannot be loaded after every available browsing/docs
 tool is attempted in the current turn, state attempted URLs, tools, and exact
