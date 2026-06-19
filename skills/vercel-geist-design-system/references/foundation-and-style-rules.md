@@ -32,7 +32,7 @@ The target feel is a restrained developer-tool interface:
 
 - Neutral-first, high-contrast, accessible surfaces.
 - Typography and spacing do most of the hierarchy work.
-- Color is functional: status, focus, selection, destructive state, success, warning, links, and sparse brand accents.
+- Color is functional: status, focus, selection, destructive state, success, warning, links, sparse brand accents, and the single most important action when supported by current `design.md` plus component evidence.
 - Layouts are orderly, dense where useful, and easy to scan repeatedly.
 - Borders are hairline structure, not decoration.
 - Motion is short, subtle, and state-driven.
@@ -106,7 +106,7 @@ Implementation guidance:
 - Use current `design.md` and Colors page values for surfaces, borders, fills, text, icons, focus, and status; do not choose arbitrary near-neutral values unless mapping an existing project token to those official roles.
 - In dark mode, map to `design.dark.md` token names rather than inventing a separate near-black palette.
 - Use alpha grays for subtle hover/focus layers when the project token system supports them.
-- Status colors are allowed only for semantic status, links, focus, selection, or documented product meaning. Map each meaning to the current `design.md` accent guidance instead of older assumptions. `accent` must alias a specific official Geist role or scale for focus, selection, link, or status; default/primary actions must follow `design.md` plus the consulted Button/component page rather than a broad accent token. Never create decorative accent colors.
+- Status colors are allowed only for semantic status, links, focus, selection, documented product meaning, or the single most important action when supported by current `design.md` plus Button/component evidence. Map each meaning to the current `design.md` accent guidance instead of older assumptions. `accent` must alias a specific official Geist role or scale for focus, selection, link, status, or that supported primary action; default/primary actions must follow `design.md` plus the consulted Button/component page rather than a broad decorative accent token. Never create decorative accent colors.
 - For charts and status-heavy views, use redundant cues such as labels, shape, texture, icon, or position alongside color. Use color-blind-friendly palettes and verify contrast with APCA where available.
 - Hover, active, and focus states should increase contrast over the rest state instead of becoming softer or less legible.
 - Do not build a one-note purple/blue gradient interface.
@@ -141,10 +141,10 @@ The following typography names are implementation mappings only. They do not sat
 - Use Subtle modifiers only through the project's official Geist class/token implementation. Do not fake subtle text by making it unreadably gray.
 - Use `tabular-nums` for metrics, timestamps, table numbers, counters, and numeric label/copy styles; use Geist Mono only for official mono classes or technical/code-like content.
 
-Official usage guidance:
+Usage mapping guidance after current docs evidence:
 
-- `text-heading-72`: marketing heroes.
-- `text-heading-32`: marketing subheadings, paragraphs, and dashboard headings.
+- `text-heading-72`: rare top-level page, launch, or hero display moments when the official typography evidence or existing Geist mapping supports that scale.
+- `text-heading-32`: major section headings when hierarchy requires it; do not use heading tokens for ordinary paragraphs.
 - `text-button-14`: default button text.
 - `text-button-12`: tiny button inside an input field.
 - `text-label-14`: most common label/menu text style.
@@ -179,7 +179,7 @@ For any task that creates or materially changes rendered UI, create or verify th
 - Typography: define or map the official `text-heading-*`, `text-button-*`, `text-label-*`, and `text-copy-*` classes. New components and screens must use these classes or mapped equivalents; raw `text-sm`, `font-bold`, arbitrary line-height, and arbitrary tracking are allowed only inside shared token/utility definitions or inside third-party/generated code that cannot consume project utilities. The final response must name the file, constraint, and why a mapped utility was impossible.
 - Spacing and rounded: define or map the current `design.md` spacing scale and `rounded.sm`, `rounded.md`, `rounded.lg`, and `rounded.full` before screen work. Screen files should consume named tokens/classes instead of one-off spacing/radius values.
 - Colors: define semantic tokens for `background`, `foreground`, `muted-foreground`, `border`, `ring`, `accent`, `link`, `info`, `destructive`, `success`, and `warning`, mapped to `design.md` light tokens and `design.dark.md` dark tokens when dark mode is in scope. Components should consume semantic tokens, not hard-coded grays.
-- Materials: define or map `material-base`, `material-small`, `material-medium`, `material-large`, `material-tooltip`, `material-menu`, `material-modal`, and `material-fullscreen` when the project does not already have them. Use current `design.md` rounded and elevation defaults for ordinary surfaces, menus/popovers, tooltips, and modals, then check the Materials page for detailed component-specific guidance.
+- Materials: use existing official Geist/Core material presets when the project has them. Otherwise, when material helpers are useful, define local aliases such as `material-base`, `material-small`, `material-medium`, `material-large`, `material-tooltip`, `material-menu`, `material-modal`, and `material-fullscreen` only as implementation mappings to current `design.md` rounded, surface, and elevation guidance plus any consulted Materials/component page evidence. Do not treat those alias names as official `design.md` tokens.
 - Primitives: create or adapt shared primitives for Button/IconButton, Input/Textarea, Select/Combobox when needed, Checkbox/Radio/Switch, Tabs, Modal/Sheet/Drawer, Menu/Tooltip, Toast/Feedback, Table/List, Empty/Error/Loading/Skeleton states, Surface/Material, and AppShell before composing multiple screens. App shells, panels, and surfaces use CSS grid/flex plus Geist tokens/materials by default. Consult Geist Grid only when the user explicitly asks for visible guide/cell layout, a user-supplied design clearly includes it, or the Grid component itself is the intended UI surface. Scope visible guide backgrounds to that exact surface; do not apply them to ordinary panels, page bodies, app shells, or unrelated content grids. Panels/surfaces still inherit Context Card, Relative Time Card, Project Banner, Entity, Description, or Table Best Practices as applicable to the content.
 - Borders and focus: define one shared focus-visible utility/variant using the current `design.md` focus-ring default or an exact project token mapping to it, then verify focus behavior separately through the Vercel Web Interface Guidelines accessibility checks. Wire that utility into every interactive primitive and prohibit screen-local outline, box-shadow, or ring definitions.
 - App shell: use Geist foundations and Vercel Web Interface Guidelines for root background, content gutters, header/sidebar/navigation structure when needed, restrained dividers, predictable max-width behavior, mobile behavior, one obvious primary action zone per view, skip-to-content, valid heading hierarchy, and context-specific `<title>`.
@@ -189,9 +189,9 @@ For any task that creates or materially changes rendered UI, create or verify th
 
 ## Materials Rules
 
-The following material names are implementation mappings only. They do not satisfy the docs gate and must not be used as proof unless `design.md` plus the official Materials page were opened, read, and influenced the implementation in the current turn.
+The following material names are local implementation mappings only. Current `design.md` describes surfaces, rounded shapes, and elevation categories; it does not make these alias names official tokens. These aliases do not satisfy the docs gate and must not be used as proof unless `design.md` plus the official Materials page were opened, read, and influenced the implementation in the current turn.
 
-Use official Geist Material presets first when the project has them. Materials are presets for radii, fills, strokes, and shadows.
+Use official Geist Material presets first when the project has them. Otherwise map local material aliases to documented radii, fills, strokes, and shadows.
 
 Surface materials sit on the page:
 
@@ -202,7 +202,7 @@ Surface materials sit on the page:
 
 Floating materials sit above the page:
 
-- `material-tooltip`: lightest shadow. Corner 6px. Tooltips are the only floating element with a triangular stem.
+- `material-tooltip`: lightest shadow. Corner 6px. Add a triangular stem only when current official Tooltip/Materials evidence explicitly requires it.
 - `material-menu`: lifted menu surface. Radius 12px.
 - `material-modal`: further lifted modal surface. Radius 12px.
 - `material-fullscreen`: biggest lift. Radius 16px.
@@ -236,7 +236,7 @@ Apply the Design section of `https://vercel.com/design/guidelines` when the UI u
 
 Use Tailwind through the host project's setup only.
 
-- When defining custom CSS/Tailwind variables, prefer raw `design.md` token roles first, then derive semantic aliases such as `background`, `foreground`, `muted-foreground`, `border`, `ring`, `link`, `info`, `destructive`, `success`, and `warning`. If the project already exposes official Geist/Core tokens or generated CSS variables, map semantic aliases to those without duplicating the raw layer. If an `accent` alias exists, it must resolve to a specific official Geist role/scale for focus, selection, link, or status, never to a decorative palette.
+- When defining custom CSS/Tailwind variables, prefer raw `design.md` token roles first, then derive semantic aliases such as `background`, `foreground`, `muted-foreground`, `border`, `ring`, `link`, `info`, `destructive`, `success`, and `warning`. If the project already exposes official Geist/Core tokens or generated CSS variables, map semantic aliases to those without duplicating the raw layer. If an `accent` alias exists, it must resolve to a specific official Geist role/scale for focus, selection, link, status, or the single most important action when supported by current `design.md` plus Button/component evidence, never to a decorative palette.
 - Keep class lists readable and consistent with existing project conventions.
 - Prefer semantic component classes or variants for repeated patterns.
 - Arbitrary color, typography, radius, shadow, focus, ring, material, and state values may appear only inside shared token, utility, variant, or primitive definitions. Route, page, screen, and feature files must consume named tokens, utilities, variants, or primitives instead of one-off arbitrary values.
