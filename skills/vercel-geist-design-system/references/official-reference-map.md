@@ -2,6 +2,7 @@
 
 Use the non-redirecting official Vercel pages below as source-of-truth references. Redirect-only resources are listed only for routing/drift awareness and do not satisfy `Docs Evidence` unless they become non-redirecting official pages in the current turn.
 
+- Canonical design/token documents: `https://vercel.com/design.md` (light theme), `https://vercel.com/design.dark.md` (dark theme)
 - Main: `https://vercel.com/geist/introduction`
 - Foundations: `https://vercel.com/font`, `https://vercel.com/geist/introduction`, `https://vercel.com/geist/colors`, `https://vercel.com/geist/typography`, `https://vercel.com/geist/materials`
 - Guidelines: `https://vercel.com/design/guidelines`

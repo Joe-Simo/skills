@@ -8,15 +8,19 @@ component behavior affected by these rules.
 
 - Motion should clarify state changes: open/close, loading, selection,
   reordering, hover/focus, success/error.
-- Do not invent universal timing ranges. Use durations from consulted component
-  docs when they exist; otherwise keep motion minimal, interruptible, and
-  purpose-driven without claiming numeric timing as `Docs Evidence`.
+- Do not invent universal timing ranges. Use current `design.md` motion guidance
+  first: many interactions can be instant, and nonessential motion should stay
+  short, physical, and tied to a state change. Use durations from consulted
+  component docs when they exist; otherwise keep motion minimal, interruptible,
+  and purpose-driven without claiming numeric timing as `Docs Evidence`.
 - Prefer CSS animations/transitions first, then Web Animations API, and avoid
   main-thread JavaScript-driven animation when possible.
 - Prefer opacity/transform transitions. Avoid layout-thrashing animations. Never
   use `transition: all`; explicitly list intended properties such as `opacity`
   and `transform`.
-- Choose easing based on what changes: size, distance, and trigger.
+- Choose easing based on what changes: size, distance, and trigger. When
+  `design.md` gives a specific easing for the pattern, use that before inventing
+  another curve.
 - Respect reduced motion preferences.
 - Make animations cancelable/interruptible and input-driven. Set
   `transform-origin` to the perceived origin of the motion.
@@ -62,22 +66,26 @@ media, forms, or interaction-heavy surfaces:
 
 ## Copy Rules
 
-- Product UI headings and buttons use Title Case: `Create Project`, `Deploy`,
-  `Copy`, `Invite`, `Upgrade`, `Cancel`, `Delete`. Marketing pages use sentence
-  case.
+- Product UI labels, buttons, titles, and tabs use Title Case. Body copy, helper
+  text, and toasts use sentence case.
+- Name actions with a verb and noun when the object matters: `Deploy Project`,
+  `Delete Member`. Avoid vague actions such as `Confirm`, `OK`, or a bare verb
+  when the noun is needed for clarity.
 - Use active voice, second person, concise action-oriented language, consistent
   nouns, numerals for counts, `&` where it fits Vercel style, and the ellipsis
   character for follow-up/loading labels: `Rename…`, `Loading…`, `Saving…`.
 - Avoid technical jargon unless the audience is explicitly developer/operator
   and the term is useful.
-- Error messages should use positive, problem-solving language: say what failed,
-  why when known, and what the user can do next. Buttons and links in error
-  states must provide a clear exit or fix path.
+- Error messages should say what happened plus what to do next. Buttons and
+  links in error states must provide a clear exit or fix path.
+- Toasts name the specific thing that changed, omit the trailing period, and do
+  not say `successfully`.
 - Empty states should describe the current absence and offer the next action.
 - Use consistent placeholder and currency formats within a context. Format dates,
-  times, numbers, delimiters, and currencies for the user's locale. Prefer curly
-  quotes and use non-breaking spaces or word joiners for glued terms such as
-  `10&nbsp;MB`, `⌘&nbsp;+&nbsp;K`, and `Vercel&nbsp;SDK`.
+  times, numbers, delimiters, and currencies for the user's locale. Prefer
+  numerals, curly quotes, the ellipsis character, and non-breaking spaces or word
+  joiners for glued terms such as `10&nbsp;MB`, `⌘&nbsp;+&nbsp;K`, and
+  `Vercel&nbsp;SDK`. Skip `please` and marketing superlatives in product UI.
 - Detect language from explicit user/account settings, the `Accept-Language`
   header, or `navigator.languages`; never infer language from IP or GPS location
   alone. Tidy widows, orphans, rag, and line breaks where the text-rendering

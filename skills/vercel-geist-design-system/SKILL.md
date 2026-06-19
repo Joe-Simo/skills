@@ -18,6 +18,8 @@ metadata:
   official: false
   short-description: Unofficial Vercel Geist visual system for clean, polished SaaS/developer-product UI; skip non-visual work and explicit alternate visual systems
   sources:
+    - https://vercel.com/design.md
+    - https://vercel.com/design.dark.md
     - https://vercel.com/font
     - https://vercel.com/design/guidelines
     - https://vercel.com/geist/introduction
@@ -123,8 +125,12 @@ text monograms, or Geist Badge/Pill UI treatments.
    library, icon library, font setup, theme tokens, existing primitives, routing,
    package manager, and validation commands.
 4. Load the required references above.
-5. Open current official Vercel pages for every required foundation, guideline,
-   brand/assets, and mapped component before implementation or strict claims.
+5. Open current official Vercel pages for every required foundation, token
+   source, guideline, brand/assets, and mapped component before implementation
+   or strict claims. `https://vercel.com/design.md` is the canonical compact
+   token/default source for light theme work; also open
+   `https://vercel.com/design.dark.md` when dark mode or theme switching is in
+   scope.
 6. Complete the Foundation Gate before screen work: fonts, semantic color
    tokens, typography utilities, material/radius utilities, focus rings, app
    shell, primitives, shared states, and screen composition rules.
@@ -139,8 +145,13 @@ text monograms, or Geist Badge/Pill UI treatments.
 
 ## Non-Negotiables
 
-Official docs are binding design input, not optional inspiration. Required
-foundation pages are `https://vercel.com/font`,
+Official docs are binding design input, not optional inspiration.
+`https://vercel.com/design.md` is required for every triggered visual task
+because it is the official compact Geist token/default source for colors,
+typography, spacing, rounded values, component defaults, layout rhythm,
+elevation, motion, focus, and content voice. `https://vercel.com/design.dark.md`
+is required when dark mode, theme switching, or dark screenshots are in scope.
+Required foundation pages also include `https://vercel.com/font`,
 `https://vercel.com/geist/introduction`, `/colors`, `/typography`,
 `/materials`, and `https://vercel.com/design/guidelines`. Brand/logo work also
 requires `https://vercel.com/geist/brands`. Component work requires every

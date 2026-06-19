@@ -87,7 +87,9 @@ jobs:
                   candidates.update(re.findall(r"\]\(([^)\s]+\.md)\)", text))
                   for raw in candidates:
                       ref = raw.split("#", 1)[0]
-                      if "://" in ref or ref.startswith("#"):
+                      if "://" in raw or "://" in ref or ref.startswith("#"):
+                          continue
+                      if ref in {"design.md", "design.dark.md", "rounded.md"}:
                           continue
                       if ref.startswith("references/"):
                           target = skill_dir / ref
@@ -110,7 +112,7 @@ jobs:
           allowed = {
               "developer.apple.com": ("/app-store/", "/apple-pay/", "/design/", "/documentation/", "/fonts/", "/icon-composer/", "/sf-symbols/", "/support/", "/wallet/"),
               "www.apple.com": ("/legal/",),
-              "vercel.com": ("/design/", "/font", "/geist/"),
+              "vercel.com": ("/design/", "/design.md", "/design.dark.md", "/font", "/geist/"),
               "www.awwwards.com": ("/about-evaluation/", "/about-status/", "/developer-award/", "/mobile-excellence-guidelines.pdf", "/privacy-policy/", "/terms/", "/websites/sites_of_the_year/"),
               "skills.sh": ("/b/joe-simo/skills", "/joe-simo/skills", "/joe-simo/skills/"),
               "www.skills.sh": ("/b/joe-simo/skills", "/joe-simo/skills", "/joe-simo/skills/", "/vercel/", "/vercel-labs/"),

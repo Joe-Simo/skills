@@ -34,7 +34,7 @@ This is community-authored by `joe-simo`. It is not affiliated with, endorsed by
 
 `vercel-geist-design-system` is a community Agent Skill for designing and reviewing Vercel-inspired interfaces with the Geist design system. It helps agents apply Geist typography, spacing, colors, materials, component styling, app shells, interaction states, screenshot audits, and UI polish across React, Next.js, Tailwind, shadcn, Radix, and other frontend surfaces.
 
-The skill treats official Vercel sources as the design authority: Geist Font, Geist foundations, Geist component pages, Geist Brands, and the Vercel Web Interface Guidelines. Skills.sh companions are routing helpers only; they do not replace official Geist docs or prove Geist compliance by themselves.
+The skill treats official Vercel sources as the design authority: `https://vercel.com/design.md`, `https://vercel.com/design.dark.md`, Geist Font, Geist foundations, Geist component pages, Geist Brands, and the Vercel Web Interface Guidelines. Skills.sh companions are routing helpers only; they do not replace official Geist docs or prove Geist compliance by themselves.
 
 The skill now asks agents to select the right Vercel/Geist reference archetype before designing. The Vercel homepage is a good reference for homepage, hero, launch, and broad marketing composition, but it is not the universal target. For dashboards, docs, settings, forms, tables, pricing, portfolios, app shells, and component libraries, agents should inspect comparable Vercel/Geist surfaces and mapped components, then measure composition details such as container width, section rhythm, density, typography scale, grid spans, interactions, and responsive behavior.
 
